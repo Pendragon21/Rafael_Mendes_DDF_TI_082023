@@ -1,0 +1,21 @@
+-- Consulta SQL para selecionar usuários cadastrados nos últimos 30 anos
+SELECT *
+FROM users_emails
+WHERE data_cadastro >= DATE_SUB(CURDATE(), INTERVAL 30 YEAR);
+
+**Explicação da Consulta SQL:**
+
+1. `SELECT *`: Isso indica que estamos selecionando todas as colunas da tabela "users_emails".
+
+2. `FROM users_emails`: Especifica a tabela da qual estamos buscando os dados, neste caso, a tabela "users_emails".
+
+3. `WHERE data_cadastro >= DATE_SUB(CURDATE(), INTERVAL 30 YEAR)`: Esta cláusula WHERE define um filtro para os registros que serão retornados. `data_cadastro` é a coluna que armazena a data de cadastro dos usuários.
+
+   - `CURDATE()`: Retorna a data atual.
+   - `DATE_SUB(CURDATE(), INTERVAL 30 YEAR)`: Subtrai 30 anos da data atual para obter a data correspondente há 30 anos atrás.
+
+   Portanto, essa parte da consulta selecionará os registros em que a coluna `data_cadastro` seja igual ou posterior à data que estava há 30 anos atrás, ou seja, selecionará usuários que se cadastraram nos últimos 30 anos.
+
+O relatório gerado por essa consulta conterá detalhes de todos os usuários que se cadastraram nos últimos 30 anos na tabela "users_emails".
+
+

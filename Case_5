@@ -14,7 +14,7 @@ WHERE data_cadastro >= DATE_SUB(CURDATE(), INTERVAL 30 YEAR);
    - `CURDATE()`: Retorna a data atual.
    - `DATE_SUB(CURDATE(), INTERVAL 30 YEAR)`: Subtrai 30 anos da data atual para obter a data correspondente há 30 anos atrás.
 
-   Portanto, essa parte da consulta selecionará os registros em que a coluna `data_cadastro` seja igual ou posterior à data que estava há 30 anos atrás, ou seja, selecionará usuários que se cadastraram nos últimos 30 anos.
+   Logo, essa parte da consulta selecionará os registros em que a coluna `data_cadastro` seja igual ou posterior à data que estava há 30 anos atrás, ou seja, selecionará usuários que se cadastraram nos últimos 30 anos.
 
 O relatório gerado por essa consulta conterá detalhes de todos os usuários que se cadastraram nos últimos 30 anos na tabela "users_emails".
 
